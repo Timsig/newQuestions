@@ -25,6 +25,7 @@ class Layout extends React.Component {
     super(props)
 
     this.addCar = this.addCar.bind(this)
+    this.reset = this.reset.bind(this)
 
     this.state = {
       cars: 0,
@@ -34,13 +35,17 @@ class Layout extends React.Component {
 
   addCar() {
     console.log("Click")
-    const newCars = parseInt(this.state.cars) + 1
-    console.log(newCars)
+    console.log("state: ", this.state.cars)
+    const newCars = parseInt(this.state.cars, 10) + 1
+    console.log("newCars: ", newCars)
     this.setState(
       {
         cars: newCars,
       },
-      () => console.log(this.state.cars)
+      () => {
+        console.log("new State: ", this.state.cars)
+        localStorage.setItem("cars", this.state.cars)
+      }
     )
   }
 
@@ -51,12 +56,13 @@ class Layout extends React.Component {
     })
   }
 
-  componentWillUnmount() {
-    localStorage.setItem("cars", this.state.cars)
-  }
+  // componentWillUnmount() {
+  //   localStorage.setItem("cars", this.state.cars)
+  // }
 
   componentWillMount() {
-    const cars = localStorage.getItem("cars")
+    const cars = localStorage.getItem("cars") || 0
+    console.log("initialState: ", cars)
     this.setState({
       cars: cars,
     })
