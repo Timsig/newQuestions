@@ -9,7 +9,7 @@ const CarBuild = () => (
     <Link to="/car-build-0-1-b">
       <Hotspot left={31} top={326} width={122} height={39} />
     </Link>
-    <Link to="/policy-holder">
+    <Link to="/driver2-questions">
       <Hotspot left={28} top={473} width={179} height={42} />
     </Link>
   </Layout>

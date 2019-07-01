@@ -22,7 +22,7 @@ const MoreAboutYou = () => (
   >
     <Qselect
       id="maritalStatus"
-      question="What is your marital status"
+      question="What's your marital status"
       options={[
         "Married",
         "Single",
@@ -35,7 +35,7 @@ const MoreAboutYou = () => (
     <Qyesno id="ownHome" question="Do you own your home?" />
     <Qbuttons
       id="employment"
-      question="What is your employment status?"
+      question="What's your employment status?"
       options={["Employed", "Self-employed", "Retired", "Other"]}
     />
     <section className="prepop-questions">

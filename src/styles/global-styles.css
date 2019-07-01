@@ -119,6 +119,7 @@ h1 {
 
 .questions-wrapper {
   background: #fff;
+  padding-bottom: 10px;
 }
 
 .questions-wrapper > h3,

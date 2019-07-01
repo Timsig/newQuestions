@@ -16,7 +16,7 @@ class Licence extends React.Component {
         inputValue: evt.target.value,
       },
       function() {
-        if (this.state.inputValue.length >= 5) {
+        if (this.state.inputValue.length >= 11) {
           this.setState({
             valid: true,
           })
@@ -44,12 +44,6 @@ class Licence extends React.Component {
       </div>
     )
 
-    // const errorMessage = (
-    //   <div className="errorMessage">
-    //     Please enter the last 5 digits of the licence number
-    //   </div>
-    // )
-
     const btnClass = this.state.valid
       ? "btn-block primary"
       : "btn-block disabled"
@@ -58,13 +52,13 @@ class Licence extends React.Component {
       <div className="qwrap licence" ref={this.myRef}>
         <label htmlFor={this.props.id}>{this.props.question}</label>
         <div className="inline-form-field">
-          <span className="licenceno">EXAMP123456 </span>
+          <span className="licenceno">BAGGI </span>
           <input
             id={this.props.id}
             type="text"
             value={this.state.inputValue}
             onChange={this.updateInputValue}
-            size="5"
+            size="11"
           />
         </div>
         <button className={btnClass} onClick={this.retrieve}>

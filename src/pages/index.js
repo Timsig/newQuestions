@@ -32,19 +32,22 @@ const IndexPage = () => (
     <Qdate id="DOB" question="Date of birth" />
     <Qrevealer
       id="Address"
-      question="Your home address"
+      question="What's your address? Enter your home postcode and press ‘Find address’ – if you’re looking to insure a property other than the one you live in, you can add it later."
       selectId="address"
       selectQ="Please choose your address"
       selectOptions={["1 Amazing Road", "2 Amazing Road", "3 Amazing Road"]}
     />
-    <Qtext id="email" question="Email address for your documents" />
+    <Qtext
+      id="email"
+      question="What email address should we send your documents to?"
+    />
 
     <Footer>
       <div className="navrow">
         <Navbutton type="primary" to="/more-about-you" cta="Next >" />
       </div>
       <div className="saverow">
-        <Navbutton type="secondary" cta="Save" />
+        <Navbutton type="secondary" cta="Save" to="/more-about-you" />
       </div>
     </Footer>
   </Layout>

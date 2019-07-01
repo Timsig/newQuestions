@@ -5,8 +5,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 
 const CarBuild = () => (
-  <Layout headerImage="https://res.cloudinary.com/lwcqviihu/image/upload/v1561020980/Question-set/C2.0_Build_policy.jpg">
-    <Link to="/policy-holder">
+  <Layout headerImage="https://res.cloudinary.com/lwcqviihu/image/upload/v1561634095/Question-set/Car-build-0-0.jpg">
+    <Link to="/driver1-questions">
       <Hotspot left={31} top={400} width={222} height={39} />
     </Link>
     <Link to="/car-build-0-0-b">
