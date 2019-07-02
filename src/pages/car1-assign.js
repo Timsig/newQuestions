@@ -17,7 +17,7 @@ const Car1assign = () => {
       />
 
       <Navbutton
-        to="/car-assign-questions"
+        to="/car1-assign-questions"
         type="primary btn-block"
         cta="Next"
         id="car1AssignNext"

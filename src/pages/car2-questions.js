@@ -19,13 +19,18 @@ import { checkPropTypes } from "prop-types"
 const Car2questions = () => {
   var nextDest
   const currDrivers = localStorage.getItem("drivers") || 0
+  const carsAssigned = localStorage.getItem("carsAssigned") || 0
 
   if (currDrivers == 0) {
     nextDest = "/car-build-2-0"
   } else if (currDrivers == 1) {
     nextDest = "/car-build-2-1"
   } else {
-    nextDest = "/car-build-2-2"
+    if (carsAssigned == 1) {
+      nextDest = "/car-build-1a1-2"
+    } else {
+      nextDest = "/car-build-2-2"
+    }
   }
 
   console.log(currDrivers, nextDest)
@@ -118,7 +123,7 @@ const Car2questions = () => {
         <h4>Please check the following statements</h4>
         <Qprepop
           id="mods"
-          textbefore="Apart from the safety feaures you've already told us about, the car"
+          textbefore="Apart from any safety feaures you've already told us about, the car"
           options={["has not", "has"]}
           textafter="been modified."
         />

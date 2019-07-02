@@ -39,7 +39,6 @@ const Car1questions = () => {
       <Qselect
         question="When was this car bought?"
         options={[
-          "--Please select--",
           "1994",
           "1995",
           "1996",
@@ -70,7 +69,6 @@ const Car1questions = () => {
       <Qselect
         question="What's this car's estimated annual mileage?"
         options={[
-          "--Please select--",
           "0-1000",
           "1,001 - 2,000",
           "2,001 - 3,000",
@@ -118,7 +116,7 @@ const Car1questions = () => {
         <h4>Please check the following statements</h4>
         <Qprepop
           id="mods"
-          textbefore="Apart from the safety feaures you've already told us about, the car"
+          textbefore="Apart from any safety feaures you've already told us about, the car"
           options={["has not", "has"]}
           textafter="been modified."
         />

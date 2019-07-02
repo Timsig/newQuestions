@@ -58,8 +58,8 @@ const MoreAboutYou = () => (
     </section>
     <Footer>
       <div className="navrow">
-        <Navbutton type="primary" to="/car-build-0-0" cta="Next >" />
-        <Navbutton type="secondary" to="/" cta="< Back" />
+        {/* <Navbutton type="primary" to="/car-build-0-0" cta="Next >" /> */}
+        {/* <Navbutton type="secondary" to="/" cta="< Back" /> */}
       </div>
       <div className="saverow">
         <Navbutton type="secondary" cta="Save" />

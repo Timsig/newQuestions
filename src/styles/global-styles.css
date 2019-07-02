@@ -148,12 +148,15 @@ h1 {
 }
 
 .datewrap #DOB-day,
-.datewrap #DOB-month {
+.datewrap #DOB-month,
+.datewrap #startDate-day,
+.datewrap #startDate-month {
   max-width: 40px;
   margin-right: 10px;
 }
 
-.datewrap #DOB-year {
+.datewrap #DOB-year,
+.datewrap #startDate-year {
   max-width: 80px;
 }
 
@@ -226,6 +229,22 @@ h1 {
   background: #333;
   border-color: #333;
   color: #fff;
+}
+
+/******* Radiolist *********/
+input[type="radio"] {
+  z-index: 301;
+  transform: translateY(-3px);
+}
+
+input[type="radio"]:hover {
+  border: 1px #333 solid;
+}
+
+input[type="radio"]:checked + label {
+  background: #333;
+  color: #fff;
+  border-radius: 3px;
 }
 
 /******* Checkbox rules *********/

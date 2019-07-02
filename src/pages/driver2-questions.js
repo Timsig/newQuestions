@@ -88,13 +88,13 @@ const Driver2questions = () => {
         <h4>Please check the following statements</h4>
         <Qprepop
           id="claimsAccidents"
-          textbefore="Tom"
+          textbefore="Martha"
           options={["has not", "has"]}
           textafter="had any claims or accidents in the last five years, including whilst insured with us."
         />
         <Qprepop
           id="UKres"
-          textbefore="Tom has been a UK resident for"
+          textbefore="Martha has been a UK resident for"
           options={[
             "more than 3 years",
             "3 years",

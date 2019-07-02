@@ -16,18 +16,28 @@ class Layout extends React.Component {
     this.addCar = this.addCar.bind(this)
     this.addDriver = this.addDriver.bind(this)
     this.reset = this.reset.bind(this)
+    this.addCarAssigned = this.addCarAssigned.bind(this)
 
     this.state = {
       cars: 0,
       drivers: 0,
-      car1Tom: false,
-      car1Martha: false,
-      car2Tom: false,
-      car2Martha: false,
+      carsAssigned: 0,
     }
   }
 
-  updateCar1(value) {}
+  addCarAssigned() {
+    console.log("car assigned click")
+    const newAssigned = parseInt(this.state.carsAssigned, 10) + 1
+    this.setState(
+      {
+        carsAssigned: newAssigned,
+      },
+      () => {
+        console.log("new assigned: ", newAssigned)
+        localStorage.setItem("carsAssigned", this.state.carsAssigned)
+      }
+    )
+  }
 
   addCar() {
     const newCars = parseInt(this.state.cars, 10) + 1
@@ -68,6 +78,7 @@ class Layout extends React.Component {
   componentWillMount() {
     const cars = localStorage.getItem("cars") || 0
     const drivers = localStorage.getItem("drivers") || 0
+    const carsAssigned = localStorage.getItem("carsAssigned") || 0
     console.log("initialState: ", cars)
     this.setState({
       cars: cars,
@@ -89,6 +100,11 @@ class Layout extends React.Component {
           action: this.addDriver,
           cars: this.state.cars,
           drivers: this.state.drivers,
+        })
+      } else if (child.props.id == "carAssignedButton") {
+        return React.cloneElement(child, {
+          action: this.addCarAssigned,
+          assigned: this.state.carsAssigned,
         })
       } else {
         return React.cloneElement(child)
