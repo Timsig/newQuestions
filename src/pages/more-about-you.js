@@ -62,7 +62,7 @@ const MoreAboutYou = () => (
         {/* <Navbutton type="secondary" to="/" cta="< Back" /> */}
       </div>
       <div className="saverow">
-        <Navbutton type="secondary" cta="Click success below when complete" />
+        <h3>Click the green success button below when complete</h3>
       </div>
     </Footer>
   </Layout>

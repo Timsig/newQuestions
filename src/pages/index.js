@@ -32,10 +32,10 @@ const IndexPage = () => (
     <Qdate id="DOB" question="Date of birth" />
     <Qrevealer
       id="Address"
-      question="What's your address? Enter your home postcode and press ‘Find address’ – if you’re looking to insure a property other than the one you live in, you can add it later."
+      question="What's your postcode? Enter your home postcode and press ‘Find address’ – if you’re looking to insure a property other than the one you live in, you can add it later."
       selectId="address"
       selectQ="Please choose your address"
-      selectOptions={["1 Amazing Road", "2 Amazing Road", "3 Amazing Road"]}
+      selectOptions={["1 Acacia Avenue, Wingbourne", "2 Acacia Avenue, Wingbourne", "3 Acacia Avenue, Wingbourne"]}
     />
     <Qtext
       id="email"

@@ -83,7 +83,8 @@ const Car2Assign = () => {
         to={nexty}
         type="primary btn-block"
         cta="Add drivers to this car"
-        id="carAssignedButton"
+        className="carAssignedButton"
+        id="car2"
       />
     </Layout>
   )

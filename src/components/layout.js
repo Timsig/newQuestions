@@ -22,26 +22,31 @@ class Layout extends React.Component {
       cars: 0,
       drivers: 0,
       carsAssigned: 0,
+      car1Assigned: false,
+      car2Assigned: false,
     }
   }
 
-  addCarAssigned() {
+  addCarAssigned(event) {
     console.log("car assigned click")
+    console.log(event.target.id)
     const newAssigned = parseInt(this.state.carsAssigned, 10) + 1
+    const theCarAssigned=event.target.id==="car1" ? "car1Assigned" : "car2Assigned"
+    console.log("thecarassigned", theCarAssigned)
     this.setState(
       {
         carsAssigned: newAssigned,
+        [theCarAssigned]: true,
       },
       () => {
-        console.log("new assigned: ", newAssigned)
         localStorage.setItem("carsAssigned", this.state.carsAssigned)
+        localStorage.setItem(theCarAssigned, true)
       }
     )
   }
 
   addCar() {
     const newCars = parseInt(this.state.cars, 10) + 1
-    console.log("newCars: ", newCars)
     this.setState(
       {
         cars: newCars,
@@ -53,16 +58,12 @@ class Layout extends React.Component {
   }
 
   addDriver() {
-    console.log("Click driver")
-    console.log("state: ", this.state.drivers)
     const newDrivers = parseInt(this.state.drivers, 10) + 1
-    console.log("newDrivers: ", newDrivers)
     this.setState(
       {
         drivers: newDrivers,
       },
       () => {
-        console.log("new State drivers: ", this.state.drivers)
         localStorage.setItem("drivers", this.state.drivers)
       }
     )
@@ -79,10 +80,15 @@ class Layout extends React.Component {
     const cars = localStorage.getItem("cars") || 0
     const drivers = localStorage.getItem("drivers") || 0
     const carsAssigned = localStorage.getItem("carsAssigned") || 0
-    console.log("initialState: ", cars)
+    const car1Assigned = localStorage.getItem("car1Assigned") || false
+    const car2Assigned = localStorage.getItem("car2Assigned") || false
+
     this.setState({
       cars: cars,
       drivers: drivers,
+      carsAssigned: carsAssigned,
+      car1Assigned: car1Assigned,
+      car2Assigned: car2Assigned,
     })
   }
 
@@ -101,7 +107,7 @@ class Layout extends React.Component {
           cars: this.state.cars,
           drivers: this.state.drivers,
         })
-      } else if (child.props.id == "carAssignedButton") {
+      } else if (child.props.className == "carAssignedButton") {
         return React.cloneElement(child, {
           action: this.addCarAssigned,
           assigned: this.state.carsAssigned,
