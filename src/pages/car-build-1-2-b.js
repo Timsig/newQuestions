@@ -15,6 +15,9 @@ const CarBuild = () => (
     <Link to="/car2-questions">
       <Hotspot left={160} top={556} width={130} height={39} />
     </Link>
+    <Link to="/car1-assign">
+      <Hotspot left={112} top={820} width={196} height={48} />
+    </Link>
   </Layout>
 )
 

@@ -21,10 +21,15 @@ import { checkPropTypes } from "prop-types"
 const Driver2questions = () => {
   var nextDest
   const currCars = localStorage.getItem("cars") || 0
+  const carsAssigned = localStorage.getItem("carsAssigned") || 0
 
   if (currCars == 0) {
     nextDest = "/car-build-0-2"
-  } else if (currCars == 1) {
+  } else if (currCars == 2 && carsAssigned == 1) {
+    nextDest = "/car-build-1a1-2"
+  } else if (currCars == 1 && carsAssigned == 1) {
+    nextDest = "/car-build-1a-2"
+  }else if (currCars == 1) {
     nextDest = "/car-build-1-2"
   } else {
     nextDest = "/car-build-2-2"

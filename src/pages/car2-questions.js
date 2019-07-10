@@ -22,20 +22,18 @@ const Car2questions = () => {
   const carsAssigned = localStorage.getItem("carsAssigned") || 0
 
   if (currDrivers == 0) {
-    nextDest = "/car-build-2-0"
-  } else if (currDrivers == 1) {
-    nextDest = "/car-build-2-1"
-  } else {
-    if (carsAssigned == 1) {
-      nextDest = "/car-build-1a1-2"
-    } else {
+      nextDest = "/car-build-2-0"
+  } else if (currDrivers == 1 && carsAssigned == 0) {
+      nextDest = "/car-build-2-1"
+  }  else if (currDrivers == 1 && carsAssigned == 1) {
+    nextDest = "/car-build-1a1-1"
+  } else if (currDrivers == 2 && carsAssigned == 1) {
+    nextDest = "/car-build-1a1-2"
+  }else {
       nextDest = "/car-build-2-2"
-    }
   }
-
-  console.log(currDrivers, nextDest)
-
-  return (
+  
+    return (
     <Layout
       headerImage="https://res.cloudinary.com/lwcqviihu/image/upload/v1561710166/Question-set/car2-search-results.jpg"
       bg="#fff"
