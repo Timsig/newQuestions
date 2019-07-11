@@ -76,7 +76,7 @@ class Layout extends React.Component {
     })
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const cars = localStorage.getItem("cars") || 0
     const drivers = localStorage.getItem("drivers") || 0
     const carsAssigned = localStorage.getItem("carsAssigned") || 0
