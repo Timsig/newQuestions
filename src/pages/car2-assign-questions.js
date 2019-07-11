@@ -42,7 +42,7 @@ const Car2Assign = () => {
       />
       <Qselect
         id="usage"
-        question="How will Tom use this car?"
+        question="How will Martha use this car?"
         options={[
           "Social, domestic & pleasure",
           "Social, domestic & pleasure ",
@@ -61,17 +61,17 @@ const Car2Assign = () => {
         <h4>Please check the following statements</h4>
         <Qprepop
           id="regKeeper"
-          options={["Tom Baggins", "Martha Baggins"]}
+          options={["Martha Baggins", "Tom Baggins" ]}
           textafter="is the registered keeper of this car."
         />
         <Qprepop
           id="legalOwner"
-          options={["Tom Baggins", "Martha Baggins"]}
+          options={["Martha Baggins", "Tom Baggins" ]}
           textafter="is the legal owner of this car."
         />
         <Qprepop
           id="NCD"
-          textbefore="Tom earnt this no claim discount"
+          textbefore="Martha earnt this no claim discount"
           options={[
             "Driving this or another car in the UK",
             "Driving this or another car overseas",
